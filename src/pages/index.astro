@@ -1,19 +1,11 @@
 ---
-import '../styles/global.css' ;
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import "../styles/global.css";
 const name = "Andrea Ammell";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>astro</title>
-	</head>
-	<body>
+	<BaseLayout>
 		<h1 class ="text-red-800"> {name} </h1>
-	</body>
+	</BaseLayout>
 		
-</html>

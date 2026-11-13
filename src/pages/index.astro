@@ -1,11 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-import "../styles/global.css";
-const name = "Andrea Ammell";
+import Contact from './index/sections/Contact.astro';
+import Hero from './index/sections/Hero.astro';
+import Projects from './index/sections/Projects.astro';
+import Services from './index/sections/Services.astro';
 ---
 
-	<BaseLayout>
-		<h1 class ="text-red-800"> {name} </h1>
-	</BaseLayout>
-		
+<BaseLayout>
+  <div id="top" class="space-y-20 md:space-y-28">
+    <Hero />
+    <Projects />
+    <Services />
+    <Contact />
+    <div class="mb-4 flex justify-start">
+      <img
+        src="https://eu-images.contentstack.com/v3/assets/blt8eb3cdfc1fce5194/bltc306b5d33b6718c4/66210b64a95903167d6382a1/2D5N0G6.jpg"
+        alt="Profile photo of Andrea Ammell Vinson"
+        loading="lazy"
+        class="h-32 w-32 rounded-full border-4 border-rose-400/30 object-cover shadow-lg md:h-40 md:w-40"
+      />
+    </div>
+  </div>
+</BaseLayout>

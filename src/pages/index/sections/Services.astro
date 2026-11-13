@@ -1,0 +1,47 @@
+---
+const services = [
+  {
+    number: '01',
+    title: 'Automated CI/CD & DevOps',
+    description: 'Constructing git-driven deployment workflows with automatic vulnerability scanning, canary releases, and instantaneous rollback capability.',
+    topics: ['GitHub Actions & ArgoCD Workflows', 'Zero-Downtime Blue/Green Deployments', 'Automated Infrastructure Testing'],
+  },
+  {
+    number: '02',
+    title: 'Cloud Governance & Security',
+    description: 'Enforcing strict IAM roles, zero-trust network boundaries, and continuous compliance audits across multi-cloud environments.',
+    topics: ['AWS/GCP IAM Policy Least-Privilege Design', 'Vault Secret Management Infrastructure', 'Automated SOC2 / ISO27001 Auditing'],
+  },
+  {
+    number: '03',
+    title: 'High-Availability Backends',
+    description: 'Architecting fault-tolerant backend services capable of handling massive load spikes without cascading system failure.',
+    topics: ['Distributed Caching & Sharded Databases', 'Asynchronous Event Queueing (RabbitMQ/Kafka)', 'Load Profiling & Stress Testing'],
+  },
+  {
+    number: '04',
+    title: 'Telemetry & Observability',
+    description: 'Setting up centralized logging and metric dashboards to provide real-time visibility into application health and resource consumption.',
+    topics: ['Prometheus & Grafana Enterprise Dashboards', 'Distributed Tracing with OpenTelemetry', 'Automated Incident Alert Routing'],
+  },
+];
+---
+
+<section id="services" aria-labelledby="services-title" class="mx-4 my-16 scroll-mt-8 text-left sm:mx-12 lg:mx-auto lg:max-w-7xl">
+  <div class="mb-8 border-b border-rose-200 pb-4 dark:border-rose-900/50">
+    <span class="mb-1 block text-xs font-semibold uppercase tracking-widest text-rose-500">Capabilities</span>
+    <h2 id="services-title" class="font-sans text-3xl font-bold text-slate-900 dark:text-rose-300">Technical Expertise</h2>
+  </div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+    {services.map((service) => (
+      <article class="flex-1 rounded-3xl border border-rose-100 bg-white/80 p-7 shadow-[0_10px_30px_rgba(244,63,94,0.08)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(244,63,94,0.15)] dark:border-rose-500/20 dark:bg-slate-900/80 dark:shadow-[0_10px_30px_rgba(0,0,0,0.3)] dark:hover:border-rose-400/40">
+        <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-rose-100 font-bold text-rose-600 dark:bg-rose-900/50 dark:text-rose-300">{service.number}</div>
+        <h3 class="mb-2 text-xl font-bold text-slate-800 dark:text-white">{service.title}</h3>
+        <p class="mb-4 text-xs leading-relaxed text-slate-600 dark:text-slate-300">{service.description}</p>
+        <ul class="list-inside list-disc space-y-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
+          {service.topics.map((topic) => <li>{topic}</li>)}
+        </ul>
+      </article>
+    ))}
+  </div>
+</section>
